@@ -17,7 +17,9 @@ const MyApp: AppType<{ session: Session | null }> = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="container mx-auto flex">
-        <Component {...pageProps} />
+        <div className="flex-grow- min-h-screen border-x">
+          <Component {...pageProps} />
+        </div>
       </div>
     </SessionProvider>
   );
