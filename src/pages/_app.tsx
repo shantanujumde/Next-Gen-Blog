@@ -4,6 +4,7 @@ import { type AppType } from "next/app";
 import { api } from "@components/utils/api";
 import "@components/styles/globals.css";
 import Head from "next/head";
+import SideNav from "@components/components/SideNav";
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
@@ -16,8 +17,10 @@ const MyApp: AppType<{ session: Session | null }> = ({
         <meta name="description" content="this is a blog site" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <div className="container mx-auto flex">
-        <div className="flex-grow- min-h-screen border-x">
+        <SideNav />
+        <div className="">
           <Component {...pageProps} />
         </div>
       </div>
